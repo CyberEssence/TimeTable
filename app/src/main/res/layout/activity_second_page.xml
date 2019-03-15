@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/jumping"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="226dp"
+        android:layout_height="186dp"
 
         android:layout_marginTop="8dp"
         android:scaleType="fitXY"
@@ -24,8 +24,8 @@
 
     <ImageButton
         android:id="@+id/dir1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="351dp"
+        android:layout_height="147dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -39,8 +39,8 @@
 
     <ImageButton
         android:id="@+id/dir2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="328dp"
+        android:layout_height="138dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -71,8 +71,8 @@
 
     <ImageButton
         android:id="@+id/sleeping"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="202dp"
+        android:layout_height="185dp"
 
         android:layout_marginTop="8dp"
         android:scaleType="fitXY"
@@ -87,8 +87,8 @@
 
     <ImageButton
         android:id="@+id/walking"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="228dp"
+        android:layout_height="192dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="8dp"

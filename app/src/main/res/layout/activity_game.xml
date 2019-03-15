@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/dir1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="360dp"
+        android:layout_height="152dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -21,8 +21,8 @@
 
     <ImageButton
         android:id="@+id/dir2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="342dp"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -34,8 +34,8 @@
 
     <TextView
         android:id="@+id/question1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="291dp"
+        android:layout_height="31dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -45,14 +45,13 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/eating"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/drawing"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="227dp"
+        android:layout_height="195dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -64,8 +63,8 @@
 
     <ImageButton
         android:id="@+id/drinking"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="228dp"
+        android:layout_height="195dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
@@ -77,8 +76,8 @@
 
     <ImageButton
         android:id="@+id/eating"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="211dp"
+        android:layout_height="196dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
