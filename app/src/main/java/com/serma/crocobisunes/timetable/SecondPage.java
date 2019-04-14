@@ -114,11 +114,11 @@ public class SecondPage extends AppCompatActivity {
             public void onClick(View v) {
                 new Thread() {
                     public void run() {
-                        mpWalkPerfect = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpWalkPerfect = MediaPlayer.create(SecondPage.this, R.raw.perfect);
                         mpWalkPerfect.start();
                     }
                 }.start();
-                Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondPage.this, "Правильно!", Toast.LENGTH_SHORT).show();
                 Animation animation = AnimationUtils.loadAnimation(
                         getApplicationContext(), R.anim.translate);
                 walking.startAnimation(animation);
