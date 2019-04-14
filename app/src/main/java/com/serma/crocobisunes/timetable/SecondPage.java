@@ -2,6 +2,8 @@ package com.serma.crocobisunes.timetable;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,10 @@ public class SecondPage extends AppCompatActivity {
     TextView ansVar3;
     TextView ansVar4;
 
+    MediaPlayer mpJumpWrong;
+    MediaPlayer mpSleepWrong;
+    MediaPlayer mpWalkPerfect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +41,11 @@ public class SecondPage extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         hideNavigator();
+
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        MediaPlayer click = MediaPlayer.create(this, R.raw.walking);
+        click.start();
 
         dir2 = (ImageButton) findViewById(R.id.dir2);
 
@@ -53,12 +64,22 @@ public class SecondPage extends AppCompatActivity {
         jumping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                new Thread() {
+                    public void run() {
+                        mpJumpWrong = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpJumpWrong.start();
+                    }
+                }.start();
 
+                Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
+                Animation animation = AnimationUtils.loadAnimation(
+                        getApplicationContext(), R.anim.translate);
+                jumping.startAnimation(animation);
 
                 Toast.makeText(SecondPage.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                Animation animation = AnimationUtils.loadAnimation(
+                Animation animation1 = AnimationUtils.loadAnimation(
                         getApplicationContext(), R.anim.scale);
-                jumping.startAnimation(animation);
+                walking.startAnimation(animation1);
             }
         });
 
@@ -68,7 +89,12 @@ public class SecondPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                new Thread() {
+                    public void run() {
+                        mpSleepWrong = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpSleepWrong.start();
+                    }
+                }.start();
                 Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
                 Animation animation = AnimationUtils.loadAnimation(
                         getApplicationContext(), R.anim.translate);
@@ -76,7 +102,7 @@ public class SecondPage extends AppCompatActivity {
 
                 Animation animation1 = AnimationUtils.loadAnimation(
                         getApplicationContext(), R.anim.scale);
-                jumping.startAnimation(animation1);
+                walking.startAnimation(animation1);
                 Toast.makeText(SecondPage.this, "Вот правильный ответ!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -86,18 +112,16 @@ public class SecondPage extends AppCompatActivity {
         walking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
+                new Thread() {
+                    public void run() {
+                        mpWalkPerfect = MediaPlayer.create(SecondPage.this, R.raw.wrong);
+                        mpWalkPerfect.start();
+                    }
+                }.start();
                 Toast.makeText(SecondPage.this, "Неправильно!", Toast.LENGTH_SHORT).show();
                 Animation animation = AnimationUtils.loadAnimation(
                         getApplicationContext(), R.anim.translate);
                 walking.startAnimation(animation);
-
-                Animation animation1 = AnimationUtils.loadAnimation(
-                        getApplicationContext(), R.anim.scale);
-                jumping.startAnimation(animation1);
-                Toast.makeText(SecondPage.this, "Вот правильный ответ!", Toast.LENGTH_SHORT).show();
             }
         });
     }
